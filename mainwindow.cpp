@@ -195,7 +195,7 @@ void MainWindow::calcSpline()
     for(int i = 0; i < bSpline.size(); ++i){
         coef.push_back(0.0);
     }
-    coef = QVector<double>();
+    coef = QVector<double>(bSpline.size());
     SqrtMt::solve(a, bSpline, coef);
     qDebug() << coef;
 }
